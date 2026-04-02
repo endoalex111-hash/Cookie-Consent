@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    width: 50%;
+    height: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid;
+}
+
+.container .container__cookies-section {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 375px;
+    padding: 20px;
+    gap: 50px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.container__icons-section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa.fa-cookie-bite {
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    transform: scaleX(-1);
+}
+
+.fa.fa-multiply {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fa.fa-multiply:hover {
+    color: #ddd;
+}
+
+.fa.fa-multiply:active {
+    transform: scale(.9);
+}
+
+.container__text-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-size: 25px;
+    margin-left: 10px;
+    top: 30px;
+}
+
+.container__button-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container__button-section button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container__button-section button:hover {
+    background-color: #ddd;
+}
+
+.container__button-section button:active {
+    transform: scale(.95);
+}
+
+#cookie-popup {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, transform .5s ease, visibility .5s ease;
+}
+
+#cookie-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .container__cookies-section {
+        width: 100%;
+        height: auto;
+        gap: 30px;
+    }
+    .container__text-section {
+        font-size: 20px;
+    }
+    .container__button-section button {
+        font-size: 18px;
+    }
+}
